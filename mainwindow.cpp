@@ -39,7 +39,8 @@ MainWindow::MainWindow(QWidget *parent)
 }
 
 void MainWindow::addVariant() {
-    variants->addItem(input->text());
+    QString var = input->text();
+    if(!var.isEmpty())variants->addItem(var);
     input->clear();
 }
 
